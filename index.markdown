@@ -4,3 +4,6 @@
 
 layout: home
 ---
+<div>
+  <h1>the Book of Jack</h1>
+</div>

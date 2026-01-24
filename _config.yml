@@ -19,6 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 url: "https://schipperius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+destination: ./public
+
+
 suptitle: the
 title: Book of Jack
 subtitle: An exploration of the word Jack; its origins and usage.
@@ -33,9 +36,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username: jekyll
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
+
+sass:
+  cache_location: ./.sass-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
