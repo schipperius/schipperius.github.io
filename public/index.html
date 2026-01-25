@@ -8,87 +8,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <meta name="theme-color" content="#712cf9">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <!-- Custom styles for this template -->
-  <style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-  .b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: #0000001a;
-    border: solid rgba(0, 0, 0, 0.15);
-    border-width: 1px 0;
-    box-shadow:
-      inset 0 0.5em 1.5em #0000001a,
-      inset 0 0.125em 0.5em #00000026;
-  }
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-  .bi {
-    vertical-align: -0.125em;
-    fill: currentColor;
-  }
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-  .btn-bd-primary {
-    --bd-violet-bg: #712cf9;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
-  }
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-  .bd-mode-toggle .bi {
-    width: 1em;
-    height: 1em;
-  }
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }
-  </style>
+
 </head>
 <body>
   <div class="container">
   <header
     class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
-  >
+>
     <a
       href="/"
       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
@@ -108,9 +34,70 @@
 </div>
 
   <main>
-    <div>
-  <h1>the Book of Jack</h1>
+    <div class="page-header">
+	<div class="row-fluid">
+		<ul class="thumbnails">
+		  <li class="span4">
+		    <div class="thumbnail">
+		      <h5><a href="/pages/articles">Articles</a></h5>
+	        <a href="/pages/articles" class="thumbnail">
+	          <img src="/assets/img/book-bindings-300x225.jpg" alt="A row of antique leather-bound book spines arranged on a shelf, displaying various colors and gilded decorative patterns. The books are tightly packed together in a library setting, representing centuries of accumulated knowledge and literary history. The aged leather and ornate spine designs convey a sense of scholarly tradition and the enduring value of preserved texts." />
+	        </a>
+			    <br />
+					<p>Old book bindings, Merton College library, Oxford.</p>
+		      <sup id="fnref:1" class="footnote pull-right">
+						<a href="#fn:1">[1]</a>
+					</sup>
+		    </div>
+		  </li>
+		  <li class="span4">
+		    <div class="thumbnail">
+		      <h5><a href="/pages/galleries">Galleries</a></h5>
+	        <a href="/pages/galleries" class="thumbnail">
+	          <img src="/assets/img/milkmaid-300x225.jpg" alt="A young woman in a white cap and yellow bodice pours milk from a pitcher into a bowl on a wooden table. Soft, natural light illuminates her focused expression and the domestic kitchen setting. The composition conveys quiet concentration and the dignity of everyday labor." />
+	        </a>
+			    <br />
+					<p>Het Melkmeisje, Johannes Vermeer, 1660. Rijksmuseum, Amsterdam.</p>
+		      <sup id="fnref:2" class="footnote pull-right">
+						<a href="#fn:2">[2]</a>
+					</sup>
+		    </div>
+		  </li>
+		  <li class="span4">
+		    <div class="thumbnail">
+		      <h5><a href="/pages/maps">Maps</a></h5>
+	        <a href="/pages/maps" class="thumbnail">
+	          <img src="/assets/img/ortelius-map-300x225.jpg" alt="A hand-colored historical map showing continents and oceans with ornate decorative borders, cartographic details, and Latin text labeling world regions from the 16th century. The map features intricate line work depicting coastlines and geographical features in muted earth tones of brown, blue, and gold against an aged parchment background, conveying the scholarly ambition and wonder of early global exploration." />
+	        </a>
+			    <br />
+					<p>Theatrum Orbis Terrarum, Abraham Ortelius, 1570. Museum Plantin-Moretus, Antwerp.</p>
+		      <sup id="fnref:3" class="footnote pull-right">
+						<a href="#fn:3">[3]</a>
+					</sup>
+		    </div>
+		  </li>
+		</ul>
+	</div>
 </div>
+<div class="well">
+  <ul id="footnotes" class="nav">
+    <li class="nav-header">Footnotes</li>     
+		<ol class="post">
+		  <li id="fn:1">This modified image of a row of books is titled &ldquo;Old Book Bindings&rdquo;, the books are located at the <a href="http://en.wikipedia.org/wiki/Merton_College_Library">Merton College Library</a> in Oxford, England. The photo is from <a href="http://en.wikipedia.org/wiki/File:Old_book_bindings.jpg">Wikipedia</a> and is the 
+		    <a href="http://en.wikipedia.org/wiki/Wikipedia:Public_domain" title="Public Domain">public domain</a>. Image retrieved January 12, 2013.
+		  </li>
+		  <li id="fn:2">This is a modified image of a 1660 painting by
+	    <a href="http://en.wikipedia.org/wiki/Johannes_Vermeer" title="Johannes Vermeer">Johannes Vermeer</a> titled &ldquo;Het Melkmeisje&rdquo;, or &ldquo;The Milkmaid&rdquo;. The painting is currently located at the <a href="https://www.rijksmuseum.nl/en" title="Rijksmuseum">Rijksmuseum</a> in Amsterdam, Netherlands. Both the work of art and the photograph are in the 
+		    <a href="http://en.wikipedia.org/wiki/Wikipedia:Public_domain" title="Public Domain">public domain</a>. Image retrieved January 15, 2013.
+		  </li>
+		  <li id="fn:3">This is a modified image of a 1570 illustration by 
+	    <a href="http://en.wikipedia.org/wiki/Abraham_Ortelius" title="Abraham Ortelius">Abraham Ortelius</a> titled &ldquo;Theatrum Orbis Terrarum&rdquo;, or &ldquo;Theatre of the World&rdquo;. The illustration is believed to be located at the <a href="http://www.museumplantinmoretus.be/" title="Museum Plantin-Moretus">Museum Plantin-Moretus</a> in Antwerp, Belgium. Both the work of art and the photograph are in the 
+		    <a href="http://en.wikipedia.org/wiki/Wikipedia:Public_domain" title="Public Domain">public domain</a>. Image retrieved January 21, 2013.
+		  </li>
+		</ol>
+	</ul>
+</div>
+<p><br /></p>
 
   </main>
   

@@ -1,3 +1,9 @@
 ---
+layout: default
 ---
-@import "base";
+
+@import "base"; // Importing a file named _base.scss
+@import "_custom";
+
+/* Other imports and existing styles can go here */
+
