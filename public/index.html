@@ -1,122 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>the Book of Jack</title>
-  <link rel="canonical" href="http://localhost:4000/">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book of Jack</title>
+    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/custom.scss">
+    <meta name="theme-color" content="">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    
+    <script src="/assets/js/theme-toggle.js"></script>
 
-<link
-  rel="stylesheet"
-  href="/assets/css/bootstrap.min.css">
+    <!-- Navbar -->
+<nav class="border-bottom">
+  <div class="container py-3">
+    <div class="d-flex align-items-center">
 
+      <!-- Left: Home / Brand -->
+      <a href="/"
+         class="d-flex align-items-center link-body-emphasis text-decoration-none me-3">
+        <span class="fs-4">Home</span>
+      </a>
 
-  <meta name="theme-color" content="">
-  <link rel="stylesheet" href="/assets/css/site.css">
-</head>
-<body>
-  <script>
-(() => {
-  'use strict'
+      <!-- Right: Nav links + Theme Dropdown -->
+      <div class="d-flex align-items-center ms-auto gap-3">
 
-  const storedTheme = localStorage.getItem('theme')
+        <!-- Nav links -->
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="/"
+               class="nav-link active px-2">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/about/"
+               class="nav-link  px-2">
+              About
+            </a>
+          </li>
+        </ul>
 
-  const getPreferredTheme = () => {
-    if (storedTheme) {
-      return storedTheme
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  }
+        <!-- Theme dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+            Theme
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
+            <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
+            <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
+          </ul>
+        </div>
 
-  const setTheme = theme => {
-    if (theme === 'auto') {
-      document.documentElement.setAttribute(
-        'data-bs-theme',
-        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      )
-    } else {
-      document.documentElement.setAttribute('data-bs-theme', theme)
-    }
-  }
-
-  setTheme(getPreferredTheme())
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (localStorage.getItem('theme') === 'auto') {
-      setTheme('auto')
-    }
-  })
-
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('theme', theme)
-          setTheme(theme)
-        })
-      })
-  })
-})()
-  </script>
-
-  <div class="container">
-  <div 
-    class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
->
-    <a
-      href="/"
-      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-    >
-      <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-        <use xlink:href="#bootstrap"></use>
-      </svg>
-      <span class="fs-4">the Book of Jack</span>
-    </a>
-    <ul class="nav nav-pills">
-      <li class="nav-item"><a href="/" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item"><a href="/about" class="nav-link">About</a>
-      </li>
-    </ul>
-  
-
-    <div class="dropdown ms-3">
-  <button class="btn btn-outline-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false">
-    Theme
-  </button>
-
-  <ul class="dropdown-menu dropdown-menu-end">
-    <li>
-      <button class="dropdown-item" data-bs-theme-value="light">
-        ☀ Light
-      </button>
-    </li>
-    <li>
-      <button class="dropdown-item" data-bs-theme-value="dark">
-        🌙 Dark
-      </button>
-    </li>
-    <li>
-      <button class="dropdown-item" data-bs-theme-value="auto">
-        ⚙ Auto
-      </button>
-    </li>
-  </ul>
-</div>
-
-</div>
-
-
-
+      </div>
+    </div>
   </div>
-  <main>
-    <div class="page-header">
+</nav>
+<!-- End Navbar -->
+ 
+    
+    <main class="flex-grow-1">
+      <div class="container py-5">
+        <div class="page-header">
 	<div class="row-fluid">
 		<ul class="thumbnails">
 		  <li class="span4">
@@ -181,33 +132,33 @@
 </div>
 <p><br /></p>
 
-  </main>
-  
-<div class="container">
-<footer
-class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-<a href="/"
-    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-    aria-label="Bootstrap">
-    <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-    <use xlink:href="#bootstrap"></use>
-    </svg>
-</a>
-<ul class="nav col-md-4 justify-content-end">
-    <li class="nav-item">
-    <a href="#" class="nav-link px-2 text-body-secondary">the Book of Jack</a>
-    </li>
-    <li class="nav-item">
-    <a href="#" class="nav-link px-2 text-body-secondary">&copy; 1994-2026</a>
-    </li>
-</ul>
+      </div>
+    </main>
+    
+    <footer class="footer mt-auto">
+  <div class="container">
+    <div class="py-4 border-top">
+      <div class="d-flex justify-content-end">
+        <div class="d-inline-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-end">
+
+          <a href="/"
+             class="link-body-emphasis text-decoration-none fw-medium">
+            Home
+          </a>
+
+          <a href="/copyright"
+             class="link-secondary text-decoration-none small">
+            © 2026
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
-</div>
 
-<script
-  src="/assets/js/bootstrap.bundle.min.js">
-</script>
-
-
-</body>
+    
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
 </html>

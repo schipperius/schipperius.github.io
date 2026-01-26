@@ -1,53 +1,51 @@
-<div class="container">
-  <div 
-    class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
->
-    <a
-      href="/"
-      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-    >
-      <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-        <use xlink:href="#bootstrap"></use>
-      </svg>
-      <span class="fs-4">the Book of Jack</span>
-    </a>
-    <ul class="nav nav-pills">
-      <li class="nav-item"><a href="/" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item"><a href="/about" class="nav-link">About</a>
-      </li>
-    </ul>
-  
+<!-- Navbar -->
+<nav class="border-bottom">
+  <div class="container py-3">
+    <div class="d-flex align-items-center">
 
-    <div class="dropdown ms-3">
-  <button class="btn btn-outline-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false">
-    Theme
-  </button>
+      <!-- Left: Home / Brand -->
+      <a href="{{ '/' | relative_url }}"
+         class="d-flex align-items-center link-body-emphasis text-decoration-none me-3">
+        <span class="fs-4">Home</span>
+      </a>
 
-  <ul class="dropdown-menu dropdown-menu-end">
-    <li>
-      <button class="dropdown-item" data-bs-theme-value="light">
-        ☀ Light
-      </button>
-    </li>
-    <li>
-      <button class="dropdown-item" data-bs-theme-value="dark">
-        🌙 Dark
-      </button>
-    </li>
-    <li>
-      <button class="dropdown-item" data-bs-theme-value="auto">
-        ⚙ Auto
-      </button>
-    </li>
-  </ul>
-</div>
+      <!-- Right: Nav links + Theme Dropdown -->
+      <div class="d-flex align-items-center ms-auto gap-3">
 
-</div>
+        <!-- Nav links -->
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="{{ '/' | relative_url }}"
+               class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %} px-2">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ '/about/' | relative_url }}"
+               class="nav-link {% if page.url == '/about/' %}active{% endif %} px-2">
+              About
+            </a>
+          </li>
+        </ul>
 
+        <!-- Theme dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+            Theme
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
+            <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
+            <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
+          </ul>
+        </div>
 
-
+      </div>
+    </div>
   </div>
+</nav>
+<!-- End Navbar -->
+ 

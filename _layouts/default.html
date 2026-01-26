@@ -1,77 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>the Book of Jack</title>
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.scss' | relative_url }}">
+    <meta name="theme-color" content="">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
 
-<link
-  rel="stylesheet"
-  href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
-
-
-  <meta name="theme-color" content="">
-  <link rel="stylesheet" href="{{ "assets/css/site.css" | relative_url }}">
-</head>
-<body>
-  <script>
-(() => {
-  'use strict'
-
-  const storedTheme = localStorage.getItem('theme')
-
-  const getPreferredTheme = () => {
-    if (storedTheme) {
-      return storedTheme
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  }
-
-  const setTheme = theme => {
-    if (theme === 'auto') {
-      document.documentElement.setAttribute(
-        'data-bs-theme',
-        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      )
-    } else {
-      document.documentElement.setAttribute('data-bs-theme', theme)
-    }
-  }
-
-  setTheme(getPreferredTheme())
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (localStorage.getItem('theme') === 'auto') {
-      setTheme('auto')
-    }
-  })
-
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('theme', theme)
-          setTheme(theme)
-        })
-      })
-  })
-})()
-  </script>
-
-  {% include navbar.html %}
-  <main>
-    {{ content }}
-  </main>
-  {% include footer.html %}
-
-<script
-  src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}">
-</script>
-
-
-</body>
+    {% include navbar.html %}
+    
+    <main class="flex-grow-1">
+      <div class="container py-5">
+        {{ content }}
+      </div>
+    </main>
+    
+    {% include footer.html %}
+    
+    <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+  
+  </body>
 </html>

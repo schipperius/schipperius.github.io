@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 ---
 
+
 <div class="page-header">
 	<div class="row-fluid">
 		<ul class="thumbnails">
