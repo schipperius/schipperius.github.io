@@ -6,7 +6,7 @@
       <!-- Left: Home / Brand -->
       <a href="{{ '/' | relative_url }}"
          class="d-flex align-items-center link-body-emphasis text-decoration-none me-3">
-        <span class="fs-4">Home</span>
+        <span class="fs-4">the Blog</span>
       </a>
 
       <!-- Right: Nav links + Theme Dropdown -->
@@ -22,7 +22,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ '/about/' | relative_url }}"
-               class="nav-link {% if page.url == '/about/' %}active{% endif %} px-2">
+               class="nav-link {% if page.url contains '/about' %}active{% endif %} px-2">
               About
             </a>
           </li>
@@ -48,4 +48,3 @@
   </div>
 </nav>
 <!-- End Navbar -->
- 

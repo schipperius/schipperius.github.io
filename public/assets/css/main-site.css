@@ -1,0 +1,12 @@
+/* Import partials from _sass */
+/* Since this is a partial, no need for front matter */
+/* These are my custom theme styles: ccolours, fonts, spacing, ... */
+/* If needed, create _overrides.scss for navbar, footer, etc., */
+/* or separate them out... */
+/* _navbar.scss for navbar specific styles */
+/* _footer.scss for footer specific styles */
+/* and so on... */
+/* Navbar active link highlight */
+.nav-link.active { font-weight: 600; color: #0d6efd; }
+
+/* Theme toggle button styles */

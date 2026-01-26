@@ -1,21 +1,12 @@
-<footer class="footer mt-auto">
-  <div class="container">
-    <div class="py-4 border-top">
-      <div class="d-flex justify-content-end">
-        <div class="d-inline-flex flex-column flex-sm-row align-items-center gap-2 text-center text-sm-end">
-
-          <a href="{{ '/' | relative_url }}"
-             class="link-body-emphasis text-decoration-none fw-medium">
-            Home
-          </a>
-
-          <a href="{{ '/copyright' | relative_url }}"
-             class="link-secondary text-decoration-none small">
-            © {{ site.time | date: '%Y' }}
-          </a>
-
-        </div>
-      </div>
+  <footer class="footer mt-auto border-top py-4">
+    <div class="container d-flex justify-content-end align-items-center gap-2">
+      <a href="{{ '/' | relative_url }}"
+         class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %} px-2">
+        Home
+      </a>
+      <a href="{{ '/copyright/' | relative_url }}"
+         class="nav-link {% if page.url contains '/copyright' %}active{% endif %} px-2">
+        © {{ site.time | date: '%Y' }}
+      </a>
     </div>
-  </div>
-</footer>
+  </footer>

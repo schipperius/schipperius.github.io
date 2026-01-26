@@ -1,0 +1,10 @@
+---
+# Jekyll compiles this SCSS file into CSS
+# Place your custom styles in the _sass folder and import them here
+---
+
+/* Import partials from _sass */
+@import "themes"; // import your own styles
+@import "overrides"; // import overrides last to take precedence
+
+
