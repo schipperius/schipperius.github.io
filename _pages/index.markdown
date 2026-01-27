@@ -3,6 +3,7 @@ layout: default
 title: Home
 permalink: /
 ---
+<p>Current: {{ page.url }}</p>
 
 <div class="page-header">
 	<div class="row-fluid">

@@ -15,59 +15,70 @@
 
     <!-- Navbar -->
 <nav class="border-bottom">
-  <div class="container py-3">
-    <div class="d-flex align-items-center">
+  <div class="container py-3 d-flex align-items-center">
 
-      <!-- Left: Home / Brand -->
-      <a href="/"
-         class="d-flex align-items-center link-body-emphasis text-decoration-none me-3">
-        <span class="fs-4">the Blog</span>
-      </a>
+    <!-- Left: Home| Brand -->
+    <a href="/"
+       class="d-flex align-items-center link-body-emphasis text-decoration-none me-auto">
+      <span class="fs-4">Home</span>
+    </a>
 
-      <!-- Right: Nav links + Theme Dropdown -->
-      <div class="d-flex align-items-center ms-auto gap-3">
+    <!-- Right: Nav links + theme -->
+    <div class="d-flex align-items-center gap-3">
 
-        <!-- Nav links -->
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="/"
-               class="nav-link active px-2">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/about/"
-               class="nav-link  px-2">
-              About
-            </a>
-          </li>
+      <ul class="nav">
+        
+        
+          
+        
+          
+            <li class="nav-item">
+              <a href="/about/"
+                 class="nav-link active">
+                About
+              </a>
+            </li>
+          
+        
+          
+            <li class="nav-item">
+              <a href="/copyright/"
+                 class="nav-link active">
+                Copyright
+              </a>
+            </li>
+          
+        
+          
+        
+      </ul>
+
+      <!-- Theme dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+          Theme
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
+          <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
+          <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
         </ul>
-
-        <!-- Theme dropdown -->
-        <div class="dropdown">
-          <button class="btn btn-outline-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-            Theme
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
-            <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
-            <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
-          </ul>
-        </div>
-
       </div>
+
     </div>
   </div>
 </nav>
-<!-- End Navbar -->
 
     
     <main class="flex-grow-1">
       <div class="container py-5">
-        <div class="container text-center py-5">
+        <p>Current: /404.html</p>
+
+
+<div class="container text-center py-5">
   <h1 class="display-4 mb-3">😕 Oops! Page Not Found</h1>
   <p class="lead mb-4">
     The page you’re looking for doesn’t exist. Don’t worry, you’re still on our site!
@@ -86,7 +97,8 @@
           <div class="card-body">
             <h5 class="card-title">About</h5>
             <p class="card-text text-truncate">
-              The Book of Jack began with an H2 pencil and a sheet of looseleaf paper.
+              Current: /about/
+
 
             </p>
             <a href="/about/" class="btn btn-outline-primary btn-sm">Go</a>
@@ -99,7 +111,8 @@
           <div class="card-body">
             <h5 class="card-title">Copyright</h5>
             <p class="card-text text-truncate">
-              Copyright
+              Current: /copyright/
+
 
             </p>
             <a href="/copyright/" class="btn btn-outline-primary btn-sm">Go</a>
@@ -112,17 +125,9 @@
           <div class="card-body">
             <h5 class="card-title">Home</h5>
             <p class="card-text text-truncate">
-              
-	
-		
-		  
-		    
-		      Articles
-	        
-	          
-	        
-			    
-					Old book bindings...
+              Current: /
+
+
             </p>
             <a href="/" class="btn btn-outline-primary btn-sm">Go</a>
           </div>
@@ -148,6 +153,40 @@
       </a>
     </div>
   </footer>
+
+  <footer class="footer mt-auto border-top py-4">
+  <div class="container d-flex justify-content-end align-items-center gap-2">
+    
+    <!-- Home link always active on 404 page -->
+    <a href="/"
+       class="nav-link active px-2">
+      Home
+    </a>
+
+    <!-- Other pages -->
+    
+    
+      
+    
+      
+        <a href="/about/"
+           class="nav-link  px-2">
+          About
+        </a>
+      
+    
+      
+        <a href="/copyright/"
+           class="nav-link  px-2">
+          Copyright
+        </a>
+      
+    
+      
+    
+
+  </div>
+</footer>
 
     
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
