@@ -1,8 +1,8 @@
 ---
+layout: default
 title: Home
+permalink: /
 ---
-
-
 
 <div class="page-header">
 	<div class="row-fluid">

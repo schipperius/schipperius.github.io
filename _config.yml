@@ -40,6 +40,10 @@ github_username: schipperius
 plugins:
   - jekyll-feed
 
+collections:
+  pages:
+    output: true
+
 sass:
   sass_dir: _sass
   cache_location: ./.sass-cache
