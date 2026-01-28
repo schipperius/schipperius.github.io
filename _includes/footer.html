@@ -1,35 +1,8 @@
-  <footer class="footer mt-auto border-top py-4">
+  <footer class="footer mt-auto border-top py-3">
     <div class="container d-flex justify-content-end align-items-center gap-2">
-      <a href="{{ '/' | relative_url }}"
-         class="nav-link {% if page.url == '/' or page.url == '/index.html' or page.url == '/404.html' %}active{% endif %} px-2">
-        Home
-      </a>
       <a href="{{ '/copyright/' | relative_url }}"
          class="nav-link {% if page.url contains '/copyright' %}active{% endif %} px-2">
         © {{ site.time | date: '%Y' }}
       </a>
     </div>
   </footer>
-
-  <footer class="footer mt-auto border-top py-4">
-  <div class="container d-flex justify-content-end align-items-center gap-2">
-    
-    <!-- Home link always active on 404 page -->
-    <a href="{{ '/' | relative_url }}"
-       class="nav-link {% if page.url == '/' or page.url == '/index.html' or page.url == '/404.html' %}active{% endif %} px-2">
-      Home
-    </a>
-
-    <!-- Other pages -->
-    {% assign footer_pages = site.pages | where_exp: "p", "p.title" %}
-    {% for p in footer_pages %}
-      {% if p.url != '/' and p.url != '/404.html' %}
-        <a href="{{ p.url | relative_url }}"
-           class="nav-link {% if page.url == p.url %}active{% endif %} px-2">
-          {{ p.title }}
-        </a>
-      {% endif %}
-    {% endfor %}
-
-  </div>
-</footer>

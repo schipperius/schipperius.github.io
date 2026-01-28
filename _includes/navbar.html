@@ -1,29 +1,18 @@
 <!-- Navbar -->
 <nav class="border-bottom">
-  <div class="container py-3 d-flex align-items-center">
-
+  <div class="container py-2 d-flex align-items-center">
     <!-- Left: Home| Brand -->
     <a href="{{ '/' | relative_url }}"
        class="d-flex align-items-center link-body-emphasis text-decoration-none me-auto">
-      <span class="fs-4">Home</span>
+      <span class="fs-4">the Book of Jack</span>
     </a>
 
     <!-- Right: Nav links + theme -->
     <div class="d-flex align-items-center gap-3">
-
-      <ul class="nav">
-        {% assign nav_pages = site.pages | where_exp: "p", "p.title" %}
-        {% for page in nav_pages %}
-          {% if page.url != '/404.html' and page.url != '/' %}
-            <li class="nav-item">
-              <a href="{{ page.url | relative_url }}"
-                 class="nav-link {% if page.url == page.url %}{% if page.url == page.url or page.url == '/404.html' %}active{% endif %}{% endif %}">
-                {{ page.title }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      <a href="{{ '/about/' | relative_url }}"
+         class="nav-link {% if page.url contains '/about' %}active{% endif %} px-2">
+        About
+      </a>
 
       <!-- Theme dropdown -->
       <div class="dropdown">
