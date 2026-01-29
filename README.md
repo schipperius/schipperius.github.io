@@ -1,11 +1,6 @@
-# username.github.io
+schipperius.github.io is the **hub** for my GitHub Pages sites.
 
-This repository is the **hub** for my GitHub Pages sites.
-
-It serves a simple landing page and links to individual projects, each of which
-lives in its own repository and is deployed under this domain.
-
-## Projects
+It serves as a simple landing page and links to individual projects:
 
 - **Project 1**  
   https://schipperius.github.io/project-1/
@@ -18,5 +13,4 @@ lives in its own repository and is deployed under this domain.
 - Each project is an independent Jekyll site
 - This repo intentionally contains minimal content
 - See individual project repositories for full site source
-# schipperius.github.io
 
