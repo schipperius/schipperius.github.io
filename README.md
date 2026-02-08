@@ -2,8 +2,8 @@ schipperius.github.io is the **hub** for my GitHub Pages sites.
 
 It serves as a simple landing page and links to individual projects:
 
-- **Project 1**  
-  https://schipperius.github.io/project-1/
+- **the Book of Jack**  
+  https://schipperius.github.io/book-of-jack/
 
 - **Project 2**  
   https://schipperius.github.io/project-2/
